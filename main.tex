@@ -1,5 +1,81 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage{multirow}
+\usepackage{amsmath}
 \begin{document}
-(Type your content here.)
+\title{Recovery induced by dislocation climb}
+
+An alternative to now classical recovery model for recovery in Al alloys is proposed. This model is based on dislocation climb induced by vacancy excess. 
+
+\subsection{Production of vacancies by plastic deformation}
+Along with dislocation displacement and multiplication, plastic deformation includes also the generation of vacancies in metals \cite{mecking_effect_1980,deschamps_situ_2012,hutchinson_quantitative_2014,militzer_modelling_1994}. Mecking et al. proposed a simple model to account the change in vacancies fraction per unit time as during deformation:
+\begin{equation} \label{eq:1}
+\frac{\partial C_v}{\partial t}=\chi \frac{\sigma \Omega}{Q_f}\dot{\epsilon}
+\end{equation}
+
+Where $\sigma$ is the applied flow stress, $\Omega$ the atomic volume, $\Omega_f$ is the activation energy for vacancy formation, $\dot{\epsilon}$ the strain rate, and $\chi$ is the efficiency to generate vacancies (usually 0.1 \cite{mecking_effect_1980,deschamps_situ_2012}). This expression basically considers that 10\% of the applied energy during deformation forms vacancies. Any excess in vacancies, larger than the equilibrium concentration of vacancies, will tend to migrate towards surfaces, grain boundaries and dislocations. Considering a material under a plastic deformation process, dislocations will be the features that will closer to the vacancies, making them the main sink for them. The reduction (or production) of vacancies while interacting with dislocations is a widely studied and complex problem \cite{clouet_vacancyedge_2006,bullough_kinetics_1970}, here a simple version of vacancy sink towards dislocations is used \cite{militzer_modelling_1994,deschamps_situ_2012,hutchinson_quantitative_2014}:
+\begin{equation}\label{eq:2}
+\frac{\partial C_v}{\partial t}=-D_v,C_v \rho_\bot
+\end{equation}
+
+Where $D_v$ is the vacancy diffusivity, and $\rho_\bot$ the dislocation density. Combination of equation \ref{eq:1} and equation\ref{eq:2} as:
+\begin{equation}\label{eq:3}
+\frac{\partial C_v}{\partial t}=\chi \frac{\sigma \Omega}{Q_f}\dot{\epsilon}-D_v,C_v \rho_\bot
+\end{equation}
+Can provide a simple account of the evolution of the vacancy concentration during plastic strain.
+
+The past equation has been used for modeling of increase of precipitation  kinetics due to diffusion enhancement due to vacancies in Fe-C-Nb austenitic steels \cite{militzer_modelling_1994}, and Al-Zn-Mg-Cu \cite{deschamps_situ_2012,hutchinson_quantitative_2014}. Deschamps et al. \cite{deschamps_situ_2011}, revealed vacancy concentration of up to 1e-4, a value close to the one at melting temperature of Al.  The only direct use of this model to measure vacancy concentration measured using Nuclear Magnetic Resonance (NMR) in pure Al provided unrealistic concentrations ($C_v=$10 at.\%)
+
+%\multicolumn{num_cols}{alignment}{contents}
+% \multirow{3}{*}{content}
+\begin{table} [h!]
+\begin{center}
+  \begin{tabular}{l|*{10}{c}}
+   \begin{tabular}{l}
+   \\
+   Nominal \\ 
+   composition
+   \end{tabular} & \multicolumn{10}{l}{Measured composition} \\
+   \hline
+    & Mg & Cu & Fe & Si & Ti & Ni & Mn & Zn & Cr & Al\\
+   \begin{tabular}{l}
+   Al - \\ 3.35 at.\% Mg \\
+   0.23 at.\% Cu
+   \end{tabular} & 3.23 & 0.229 & 0.048& 0.048& 0.008&0.003 &0.0005 & 0.0008& 0.0005& Balance\\ 
+   \begin{tabular}{l}
+   Al - \\3.35 at.\% Mg \\
+   0.1 at.\% Cu
+   \end{tabular} & 3.2 & 0.115 &0.046 &0.0046 &0.007 &0.003&0.0005&0.00012 &0.0005 & Balance 
+  \end{tabular}
+\caption{Chemical composition of provided Al-Mg-Cu alloys by Inductive Coupled Plasma spectroscopy (ICP)}
+\label{table:1_MatrixRemaining}
+\end{center}
+\end{table}
+
+%\multicolumn{num_cols}{alignment}{contents}
+% \multirow{3}{*}{content}
+\begin{table} [h!]
+\begin{center}
+  \begin{tabular}{l|*{10}{c}}
+  \begin{tabular}{l}
+  \\
+  Nominal\\ composition
+  \end{tabular}
+    & \multicolumn{10}{l}{Measured composition} \\
+    \hline
+    & Mg & Cu & Fe & Si & Ti & Ni & Mn & Zn & Cr & Al\\
+   \begin{tabular}{l}
+   Al - \\
+   2.9 at.\% Mg 
+   \end{tabular} & 2.93 & 0.0008 & 0.031& 0.044& 0.006&0.003 &0.002& 0.004& 0.0005& Balance\\ 
+  \end{tabular}
+\caption{Chemical composition of provided Al-Mg alloy by Inductive Coupled Plasma spectroscopy (ICP)}
+\label{table:1_MatrixRemaining}
+\end{center}
+\end{table}
+
+
+\bibliographystyle{abbrv}
+\bibliography{Zotero}
+
 \end{document}
